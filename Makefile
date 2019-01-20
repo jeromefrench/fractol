@@ -6,7 +6,7 @@
 #    By: jchardin <jerome.chardin@outlook.com>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/01/18 12:42:22 by jchardin          #+#    #+#              #
-#    Updated: 2019/01/19 14:26:37 by jchardin         ###   ########.fr        #
+#    Updated: 2019/01/20 15:58:00 by jchardin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,6 +30,7 @@ DEBUG = -g
 FLAG = -Wall -Wextra -Werror
 
 all:
+	clear
 	$(CC) $(DEBUG) $(DEBUG)  $(INCLUDE) $(LIBRARY) $(C_Sources) -o $(NAME) 
 
 

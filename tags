@@ -7,6 +7,7 @@
 CC	Makefile	/^CC = gcc$/;"	m
 C_Sources	Makefile	/^C_Sources = $(addprefix $(SRC_Dir),$(SRC))$/;"	m
 DEBUG	Makefile	/^DEBUG = -g$/;"	m
+FLAG	Makefile	/^FLAG = -Wall -Wextra -Werror$/;"	m
 INCLUDE	Makefile	/^INCLUDE = -I .\/includes\/$/;"	m
 LIBRARY	Makefile	/^LIBRARY = -L \/usr\/local\/lib -lmlx -framework OpenGL -framework AppKit$/;"	m
 MLX_H	includes/mlx.h	/^#define	MLX_H$/;"	d
@@ -18,29 +19,51 @@ alpha	includes/fractol.h	/^	int			alpha;$/;"	m	struct:s_my_win
 b	includes/fractol.h	/^	double		b;$/;"	m	struct:s_complex
 bits_per_pixel	includes/fractol.h	/^	int			bits_per_pixel;$/;"	m	struct:s_my_win
 blue	includes/fractol.h	/^	int			blue;$/;"	m	struct:s_my_win
+c	includes/fractol.h	/^	t_complex	c;$/;"	m	struct:s_my_man
+color	includes/fractol.h	/^	float		color;$/;"	m	struct:s_my_man
 color	includes/fractol.h	/^	int			color;$/;"	m	struct:s_my_win
 data	includes/fractol.h	/^	char		*data;$/;"	m	struct:s_my_win
 endian	includes/fractol.h	/^	int			endian;$/;"	m	struct:s_my_win
-ft_complex_add	srcs/file_math_util.c	/^void			ft_complex_add(t_complex *z1, t_complex *z2)$/;"	f
+fractolh	includes/fractol.h	/^# define fractolh$/;"	d
+ft_complex_add	srcs/file_math_util.c	/^t_complex		ft_complex_add(t_complex z1, t_complex z2)$/;"	f
 ft_complex_mod	srcs/file_math_util.c	/^double			ft_complex_mod(t_complex z)$/;"	f
 ft_complex_square	srcs/file_math_util.c	/^void			ft_complex_square(t_complex *z)$/;"	f
 ft_draw_mandelbrot	srcs/file_mandelbrot.c	/^void			ft_draw_mandelbrot(t_my_win *s_win)$/;"	f
+ft_init_mandelbrot	srcs/main.c	/^void			ft_init_mandelbrot(t_my_win *s_win)$/;"	f
 ft_init_mlx_window	srcs/file_mlx_init.c	/^void	ft_init_mlx_window(t_my_win *s_win)$/;"	f
 ft_key_hook	srcs/file_mlx_init.c	/^int		ft_key_hook(int key, t_my_win *s_win)$/;"	f
 ft_make_complex	srcs/file_math_util.c	/^t_complex		ft_make_complex(double a, double b)$/;"	f
+ft_pointer	srcs/main.c	/^int				ft_pointer(int button, int x, int y, t_my_win *s_win)$/;"	f
 ft_put_pixel	srcs/file_mlx_init.c	/^char			*ft_put_pixel(char *data, int x, int y,$/;"	f
 green	includes/fractol.h	/^	int			green;$/;"	m	struct:s_my_win
 height	includes/fractol.h	/^	int			height;$/;"	m	struct:s_my_win
 img	includes/fractol.h	/^	void		*img;$/;"	m	struct:s_my_win
 init	includes/fractol.h	/^	void		*init;$/;"	m	struct:s_my_win
-main	srcs/main.c	/^int		main(void)$/;"	f
+main	srcs/main.c	/^int				main(void)$/;"	f
+n	includes/fractol.h	/^	float		n;$/;"	m	struct:s_my_man
+n_max	includes/fractol.h	/^	float		n_max;$/;"	m	struct:s_my_man
 red	includes/fractol.h	/^	int			red;$/;"	m	struct:s_my_win
 s_complex	includes/fractol.h	/^typedef struct 	s_complex$/;"	s
+s_man	includes/fractol.h	/^	t_my_man	s_man;$/;"	m	struct:s_my_win
+s_my_man	includes/fractol.h	/^typedef struct	s_my_man$/;"	s
 s_my_win	includes/fractol.h	/^typedef struct	s_my_win$/;"	s
 size_line	includes/fractol.h	/^	int			size_line;$/;"	m	struct:s_my_win
 t_complex	includes/fractol.h	/^}				t_complex;$/;"	t	typeref:struct:s_complex
+t_my_man	includes/fractol.h	/^}				t_my_man;$/;"	t	typeref:struct:s_my_man
 t_my_win	includes/fractol.h	/^}				t_my_win;$/;"	t	typeref:struct:s_my_win
 width	includes/fractol.h	/^	int			width;$/;"	m	struct:s_my_win
 win	includes/fractol.h	/^	void		*win;$/;"	m	struct:s_my_win
+x	includes/fractol.h	/^	float		x;$/;"	m	struct:s_my_man
 x	includes/fractol.h	/^	int			x;$/;"	m	struct:s_my_win
+x_max	includes/fractol.h	/^	float		x_max;$/;"	m	struct:s_my_man
+x_min	includes/fractol.h	/^	float		x_min;$/;"	m	struct:s_my_man
+x_mouse	includes/fractol.h	/^	int			x_mouse;$/;"	m	struct:s_my_man
+x_pixel	includes/fractol.h	/^	float		x_pixel;$/;"	m	struct:s_my_man
+y	includes/fractol.h	/^	float		y;$/;"	m	struct:s_my_man
 y	includes/fractol.h	/^	int			y;$/;"	m	struct:s_my_win
+y_max	includes/fractol.h	/^	float		y_max;$/;"	m	struct:s_my_man
+y_min	includes/fractol.h	/^	float		y_min;$/;"	m	struct:s_my_man
+y_mouse	includes/fractol.h	/^	int			y_mouse;$/;"	m	struct:s_my_man
+y_pixel	includes/fractol.h	/^	float		y_pixel;$/;"	m	struct:s_my_man
+z	includes/fractol.h	/^	t_complex	z;$/;"	m	struct:s_my_man
+zoom	includes/fractol.h	/^	float		zoom;$/;"	m	struct:s_my_man

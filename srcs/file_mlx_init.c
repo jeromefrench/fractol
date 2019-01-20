@@ -6,7 +6,7 @@
 /*   By: jchardin <jerome.chardin@outlook.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/18 15:11:44 by jchardin          #+#    #+#             */
-/*   Updated: 2019/01/19 13:43:54 by jchardin         ###   ########.fr       */
+/*   Updated: 2019/01/20 15:46:57 by jchardin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int color, t_my_win *s_win)
 	int		pixel;
 	
 	
-	pixel = (y * s_win->height) + x;
+	pixel = (y * s_win->width) + x;
 	if(color == 0)
 	{
 		s_win->red = 0xff;

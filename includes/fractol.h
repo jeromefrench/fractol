@@ -6,7 +6,7 @@
 /*   By: jchardin <jerome.chardin@outlook.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/18 13:43:13 by jchardin          #+#    #+#             */
-/*   Updated: 2019/01/19 13:58:27 by jchardin         ###   ########.fr       */
+/*   Updated: 2019/01/20 18:35:55 by jchardin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,26 @@ typedef struct 	s_complex
 	double		a;
 	double		b;
 }				t_complex;
+
+typedef struct	s_my_man
+{
+	double		x_pixel;
+	double		y_pixel;
+	double		x;
+	double		x_max;
+	double		x_min;
+	double		y_max;
+	double		y_min;
+	double		y;
+	double		n_max;
+	t_complex	z;
+	t_complex	c;
+	double		n;
+	double		color;
+	double		zoom;
+	double	x_mouse;
+	double	y_mouse;
+}				t_my_man;
 
 typedef struct	s_my_win
 {
@@ -40,6 +60,7 @@ typedef struct	s_my_win
 	int			x;
 	int			y;
 	int			color;
+	t_my_man	s_man;
 }				t_my_win;
 
 t_complex		ft_make_complex(double a, double b);
