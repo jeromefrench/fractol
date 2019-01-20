@@ -1,0 +1,46 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+CC	Makefile	/^CC = gcc$/;"	m
+C_Sources	Makefile	/^C_Sources = $(addprefix $(SRC_Dir),$(SRC))$/;"	m
+DEBUG	Makefile	/^DEBUG = -g$/;"	m
+INCLUDE	Makefile	/^INCLUDE = -I .\/includes\/$/;"	m
+LIBRARY	Makefile	/^LIBRARY = -L \/usr\/local\/lib -lmlx -framework OpenGL -framework AppKit$/;"	m
+MLX_H	includes/mlx.h	/^#define	MLX_H$/;"	d
+NAME	Makefile	/^NAME = fractol$/;"	m
+SRC	Makefile	/^SRC = main.c  \\$/;"	m
+SRC_Dir	Makefile	/^SRC_Dir = .\/srcs\/$/;"	m
+a	includes/fractol.h	/^	double		a;$/;"	m	struct:s_complex
+alpha	includes/fractol.h	/^	int			alpha;$/;"	m	struct:s_my_win
+b	includes/fractol.h	/^	double		b;$/;"	m	struct:s_complex
+bits_per_pixel	includes/fractol.h	/^	int			bits_per_pixel;$/;"	m	struct:s_my_win
+blue	includes/fractol.h	/^	int			blue;$/;"	m	struct:s_my_win
+color	includes/fractol.h	/^	int			color;$/;"	m	struct:s_my_win
+data	includes/fractol.h	/^	char		*data;$/;"	m	struct:s_my_win
+endian	includes/fractol.h	/^	int			endian;$/;"	m	struct:s_my_win
+ft_complex_add	srcs/file_math_util.c	/^void			ft_complex_add(t_complex *z1, t_complex *z2)$/;"	f
+ft_complex_mod	srcs/file_math_util.c	/^double			ft_complex_mod(t_complex z)$/;"	f
+ft_complex_square	srcs/file_math_util.c	/^void			ft_complex_square(t_complex *z)$/;"	f
+ft_draw_mandelbrot	srcs/file_mandelbrot.c	/^void			ft_draw_mandelbrot(t_my_win *s_win)$/;"	f
+ft_init_mlx_window	srcs/file_mlx_init.c	/^void	ft_init_mlx_window(t_my_win *s_win)$/;"	f
+ft_key_hook	srcs/file_mlx_init.c	/^int		ft_key_hook(int key, t_my_win *s_win)$/;"	f
+ft_make_complex	srcs/file_math_util.c	/^t_complex		ft_make_complex(double a, double b)$/;"	f
+ft_put_pixel	srcs/file_mlx_init.c	/^char			*ft_put_pixel(char *data, int x, int y,$/;"	f
+green	includes/fractol.h	/^	int			green;$/;"	m	struct:s_my_win
+height	includes/fractol.h	/^	int			height;$/;"	m	struct:s_my_win
+img	includes/fractol.h	/^	void		*img;$/;"	m	struct:s_my_win
+init	includes/fractol.h	/^	void		*init;$/;"	m	struct:s_my_win
+main	srcs/main.c	/^int		main(void)$/;"	f
+red	includes/fractol.h	/^	int			red;$/;"	m	struct:s_my_win
+s_complex	includes/fractol.h	/^typedef struct 	s_complex$/;"	s
+s_my_win	includes/fractol.h	/^typedef struct	s_my_win$/;"	s
+size_line	includes/fractol.h	/^	int			size_line;$/;"	m	struct:s_my_win
+t_complex	includes/fractol.h	/^}				t_complex;$/;"	t	typeref:struct:s_complex
+t_my_win	includes/fractol.h	/^}				t_my_win;$/;"	t	typeref:struct:s_my_win
+width	includes/fractol.h	/^	int			width;$/;"	m	struct:s_my_win
+win	includes/fractol.h	/^	void		*win;$/;"	m	struct:s_my_win
+x	includes/fractol.h	/^	int			x;$/;"	m	struct:s_my_win
+y	includes/fractol.h	/^	int			y;$/;"	m	struct:s_my_win
