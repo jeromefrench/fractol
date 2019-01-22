@@ -6,15 +6,21 @@
 /*   By: jchardin <jerome.chardin@outlook.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/18 13:43:13 by jchardin          #+#    #+#             */
-/*   Updated: 2019/01/22 09:24:35 by jchardin         ###   ########.fr       */
+/*   Updated: 2019/01/22 19:03:10 by jchardin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FRACTOL_H
 # define FRACTOL_H
 # include "mlx.h"
+# include "../libft/libft.h"
 # include <math.h>
 # include <stdio.h>
+
+# define MANDELBROT 0
+# define JULIA 1 
+# define BURNIG_SHIP 2
+# define INVALID 2
 
 typedef struct	s_complex
 {
@@ -63,6 +69,9 @@ typedef struct	s_my_win
 	int			y;
 	int			color;
 	t_my_man	s_man;
+	char		*valid_param;
+	char		**listparam;
+	int			param;
 }				t_my_win;
 
 t_complex		ft_make_complex(double a, double b);
@@ -77,4 +86,7 @@ void			ft_choose_color_and_put_pixel(t_my_man *s_man, t_my_win *s_win);
 void			ft_calcul_iteration_mandelbrot(t_my_man *s_man, t_my_win *s_win);
 void			ft_calcul_offset_axes(t_my_man *s_man, t_my_win *s_win);
 void			ft_calcul_mandelbrot(t_my_man *s_man, t_my_win *s_win);
+void			ft_julia(t_my_win *s_win);
+void			ft_mandelbrot(t_my_win *s_win);
+void			ft_burning_ship(t_my_win *s_win);
 #endif

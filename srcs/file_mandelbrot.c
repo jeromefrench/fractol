@@ -6,11 +6,30 @@
 /*   By: jchardin <jerome.chardin@outlook.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/18 16:44:03 by jchardin          #+#    #+#             */
-/*   Updated: 2019/01/22 09:26:48 by jchardin         ###   ########.fr       */
+/*   Updated: 2019/01/22 19:04:17 by jchardin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
+
+void			ft_init_mandelbrot(t_my_win *s_win)
+{
+	s_win->s_man.zoom = 1;
+	s_win->s_man.n_max = 200;
+	s_win->s_man.y_min = -20;
+	s_win->s_man.y_max = 20;
+	s_win->s_man.x_min = -20;
+	s_win->s_man.x_max = 20;
+}
+
+void		ft_mandelbrot(t_my_win *s_win)
+{
+	s_win->param = MANDELBROT;
+	ft_init_mandelbrot(s_win);
+	ft_init_mlx_window(s_win);
+	s_win->img = mlx_new_image(s_win->init, s_win->width, s_win->height);
+	ft_draw_mandelbrot(s_win);
+}
 
 void			ft_draw_mandelbrot(t_my_win *s_win)
 {
