@@ -6,23 +6,21 @@
 /*   By: jchardin <jerome.chardin@outlook.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/18 12:45:13 by jchardin          #+#    #+#             */
-/*   Updated: 2019/01/23 11:32:47 by jchardin         ###   ########.fr       */
+/*   Updated: 2019/01/23 15:44:42 by jchardin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
 
-
 int				ft_pointer(int button, int x, int y, t_my_win *s_win)
 {
 	printf("button =%d\n", button);
 	s_win->s_man.zoom = 0.5;
-	s_win->s_man.x_mouse = x;
-	s_win->s_man.y_mouse = y;
+	s_win->s_man.mouse.x = x;
+	s_win->s_man.mouse.y = y;
 	ft_draw_mandelbrot(s_win);
 	return (1);
 }
-
 
 int				main(int argc, char **argv)
 {
@@ -37,4 +35,3 @@ int				main(int argc, char **argv)
 	mlx_loop(s_win.init);
 	return (1);
 }
-

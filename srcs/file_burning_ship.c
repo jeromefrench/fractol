@@ -6,12 +6,11 @@
 /*   By: jchardin <jerome.chardin@outlook.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/22 18:34:39 by jchardin          #+#    #+#             */
-/*   Updated: 2019/01/22 18:56:11 by jchardin         ###   ########.fr       */
+/*   Updated: 2019/01/23 15:57:19 by jchardin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
-
 
 void		ft_burning_ship(t_my_win *s_win)
 {
