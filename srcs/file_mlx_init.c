@@ -6,7 +6,7 @@
 /*   By: jchardin <jerome.chardin@outlook.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/18 15:11:44 by jchardin          #+#    #+#             */
-/*   Updated: 2019/01/23 15:59:39 by jchardin         ###   ########.fr       */
+/*   Updated: 2019/01/23 17:13:45 by jchardin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,42 +26,48 @@ int				ft_key_hook(int key, t_my_win *s_win)
 	return (1);
 }
 
-char			*ft_put_pixel(char *data, int x, int y,
-int color, t_my_win *s_win)
+void			ft_put_pixel(char *ptr_data, t_point point, t_color color, t_my_win *s_win)
 {
-	int		size_screen;
-	int		pixel;
-	int		h;
+	int			size_screen;
+	t_pixel		pixel;
+	int			pixel_data;
 
-	h = 360 * color / 255;
-	if (h < 121)
+	color = ft_convert_rgb_hsv(color);
+	pixel.x = (int)point.x;
+	pixel.y = (int)point.y;
+	pixel_data = (pixel.y * s_win->width) + pixel.x;
+	size_screen = (s_win->width * s_win->height);
+	if (pixel_data < size_screen && pixel_data > 0)
 	{
-		s_win->blue = 0;
-		s_win->green = h * 255 / 120;
-		s_win->red = 255 - s_win->green;
+		pixel_data = pixel_data * 4;
+		ptr_data[pixel_data] = color.blue;
+		ptr_data[pixel_data + 1] = color.green;
+		ptr_data[pixel_data + 2] = color.red;
+		ptr_data[pixel_data + 3] = color.alpha;
 	}
-	else if (h < 241)
+}
+
+t_color			ft_convert_rgb_hsv(t_color color)
+{
+	color.h = 360 * color.h / 255;
+	if (color.h < 121)
 	{
-		s_win->red = 0;
-		s_win->blue = (h - 120) * 255 / 120;
-		s_win->green = 255 - s_win->blue;
+		color.blue = 0;
+		color.green = color.h * 255 / 120;
+		color.red = 255 - color.green;
+	}
+	else if (color.h < 241)
+	{
+		color.red = 0;
+		color.blue = (color.h - 120) * 255 / 120;
+		color.green = 255 - color.blue;
 	}
 	else
 	{
-		s_win->green = 0;
-		s_win->red = (h - 240) * 255 / 120;
-		s_win->blue = 255 - s_win->red;
+		color.green = 0;
+		color.red = (color.h - 240) * 255 / 120;
+		color.blue = 255 - color.red;
 	}
-	s_win->alpha = 0;
-	pixel = (y * s_win->width) + x;
-	size_screen = (s_win->width * s_win->height);
-	if (pixel < size_screen && pixel > 0)
-	{
-		pixel = pixel * 4;
-		data[pixel] = s_win->blue;
-		data[pixel + 1] = s_win->green;
-		data[pixel + 2] = s_win->red;
-		data[pixel + 3] = s_win->alpha;
-	}
-	return (data);
+	color.alpha = 0;
+	return (color);
 }
