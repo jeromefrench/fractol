@@ -6,7 +6,7 @@
 /*   By: jchardin <jerome.chardin@outlook.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/18 13:43:13 by jchardin          #+#    #+#             */
-/*   Updated: 2019/01/22 19:03:10 by jchardin         ###   ########.fr       */
+/*   Updated: 2019/01/23 11:34:06 by jchardin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,21 @@
 # define BURNIG_SHIP 2
 # define INVALID 2
 
+typedef enum	fractal
+{
+	mandelbrot,
+	julia,
+	burning_ship
+}				e_fractal;
+
+
 typedef struct	s_complex
 {
 	double		a;
 	double		b;
 }				t_complex;
+
+
 
 typedef struct	s_my_man
 {
@@ -72,6 +82,7 @@ typedef struct	s_my_win
 	char		*valid_param;
 	char		**listparam;
 	int			param;
+	e_fractal	fractal;
 }				t_my_win;
 
 t_complex		ft_make_complex(double a, double b);
@@ -89,4 +100,7 @@ void			ft_calcul_mandelbrot(t_my_man *s_man, t_my_win *s_win);
 void			ft_julia(t_my_win *s_win);
 void			ft_mandelbrot(t_my_win *s_win);
 void			ft_burning_ship(t_my_win *s_win);
+void			ft_choose_fractol(t_my_win *s_win, int argc, char **argv);
+void			ft_quit(char *str);
+void			ft_init_param_menu(t_my_win *s_win);
 #endif
