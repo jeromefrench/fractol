@@ -6,7 +6,7 @@
 /*   By: jchardin <jerome.chardin@outlook.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/18 13:47:56 by jchardin          #+#    #+#             */
-/*   Updated: 2019/01/24 15:04:29 by jchardin         ###   ########.fr       */
+/*   Updated: 2019/01/24 17:16:03 by jchardin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,4 +45,13 @@ double			ft_complex_mod(t_complex z)
 
 	mod = (z.a * z.a) + (z.b * z.b);
 	return (mod);
+}
+
+void		ft_complex_absolute_value_square(t_complex *z)
+{
+	if (z->a < 0)
+		z->a = z->a * -1;
+	if (z->b < 0)
+		z->b = z->b * -1;
+	ft_complex_square(z);
 }

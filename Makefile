@@ -6,7 +6,7 @@
 #    By: jchardin <jerome.chardin@outlook.com>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/01/18 12:42:22 by jchardin          #+#    #+#              #
-#    Updated: 2019/01/24 14:57:52 by jchardin         ###   ########.fr        #
+#    Updated: 2019/01/24 16:54:00 by jchardin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,6 +34,7 @@ LIBRARY = -L /usr/local/lib -lmlx -framework OpenGL -framework AppKit
 $(NAME):$(CObjects)
 	make -C ./libft
 	$(CC) $(FLAGS) $(CObjects) -o $(NAME) $(INCLUDE) $(LIBRARY) ./libft/libft.a
+	ctags -R .
 
 $(OBJ_Dir)%.o:$(SRC_Dir)%.c
 	mkdir $(OBJ_Dir) 2> /dev/null || true
@@ -49,5 +50,6 @@ fclean: clean
 re: fclean $(NAME)
 
 me: re
+	ctags -R .
 
 .PHONY: all clean fclean re
