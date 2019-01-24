@@ -6,13 +6,13 @@
 /*   By: jchardin <jerome.chardin@outlook.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/23 17:19:10 by jchardin          #+#    #+#             */
-/*   Updated: 2019/01/23 17:20:34 by jchardin         ###   ########.fr       */
+/*   Updated: 2019/01/24 15:11:26 by jchardin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
 
-void			ft_calcul_iteration_mandelbrot(t_my_man *s_man, t_my_win *s_win)
+void			ft_calcul_iteration_mandelbrot(t_my_man *s_man)
 {
 	while ((s_man->n <= s_man->n_max) && (ft_complex_mod(s_man->z) < 4))
 	{

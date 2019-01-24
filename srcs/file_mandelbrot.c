@@ -6,7 +6,7 @@
 /*   By: jchardin <jerome.chardin@outlook.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/18 16:44:03 by jchardin          #+#    #+#             */
-/*   Updated: 2019/01/23 17:25:57 by jchardin         ###   ########.fr       */
+/*   Updated: 2019/01/24 15:11:04 by jchardin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ void			ft_calcul_mandelbrot(t_my_man *s_man, t_my_win *s_win)
 			s_man->c = ft_make_complex(s_man->point.x, s_man->point.y);
 			s_man->z = ft_make_complex(0, 0);
 			s_man->n = 1;
-			ft_calcul_iteration_mandelbrot(s_man, s_win);
+			ft_calcul_iteration_mandelbrot(s_man);
 			ft_choose_color_and_put_pixel(s_man, s_win);
 		}
 		s_man->pixel.y++;

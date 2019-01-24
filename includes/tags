@@ -1,0 +1,72 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+FRACTOL_H	fractol.h	/^# define FRACTOL_H$/;"	d
+LIBFT_H	libft.h	/^# define LIBFT_H$/;"	d
+a	fractol.h	/^	double		a;$/;"	m	struct:s_complex
+alpha	fractol.h	/^	int			alpha;$/;"	m	struct:s_color
+alpha	fractol.h	/^	int			alpha;$/;"	m	struct:s_my_win
+axes	fractol.h	/^	t_axes		axes;$/;"	m	struct:s_my_man
+b	fractol.h	/^	double		b;$/;"	m	struct:s_complex
+bits_per_pixel	fractol.h	/^	int			bits_per_pixel;$/;"	m	struct:s_my_win
+blue	fractol.h	/^	int			blue;$/;"	m	struct:s_color
+burning_ship	fractol.h	/^	burning_ship$/;"	e	enum:e_myfractal
+c	fractol.h	/^	t_complex	c;$/;"	m	struct:s_my_man
+color	fractol.h	/^	t_color		color;$/;"	m	struct:s_my_man
+content	libft.h	/^	void			*content;$/;"	m	struct:s_list
+content_size	libft.h	/^	size_t			content_size;$/;"	m	struct:s_list
+data	fractol.h	/^	char		*data;$/;"	m	struct:s_my_win
+e_myfractal	fractol.h	/^typedef enum	e_myfractal$/;"	g
+endian	fractol.h	/^	int			endian;$/;"	m	struct:s_my_win
+fractal	fractol.h	/^	t_fractal	fractal;$/;"	m	struct:s_my_win
+green	fractol.h	/^	int			green;$/;"	m	struct:s_color
+h	fractol.h	/^	int			h;$/;"	m	struct:s_color
+height	fractol.h	/^	int			height;$/;"	m	struct:s_my_win
+img	fractol.h	/^	void		*img;$/;"	m	struct:s_my_win
+init	fractol.h	/^	void		*init;$/;"	m	struct:s_my_win
+julia	fractol.h	/^	julia,$/;"	e	enum:e_myfractal
+listparam	fractol.h	/^	char		**listparam;$/;"	m	struct:s_my_win
+mandelbrot	fractol.h	/^	mandelbrot,$/;"	e	enum:e_myfractal
+max	fractol.h	/^	t_point		max;$/;"	m	struct:s_axes
+min	fractol.h	/^	t_point		min;$/;"	m	struct:s_axes
+mouse	fractol.h	/^	t_point		mouse;$/;"	m	struct:s_my_man
+n	fractol.h	/^	double		n;$/;"	m	struct:s_my_man
+n_max	fractol.h	/^	double		n_max;$/;"	m	struct:s_my_man
+next	libft.h	/^	struct s_list	*next;$/;"	m	struct:s_list	typeref:struct:s_list::s_list
+offset	fractol.h	/^	t_point		offset;$/;"	m	struct:s_my_man
+pixel	fractol.h	/^	t_point		pixel;$/;"	m	struct:s_my_man
+point	fractol.h	/^	t_point		point;$/;"	m	struct:s_my_man
+red	fractol.h	/^	int			red;$/;"	m	struct:s_color
+s_axes	fractol.h	/^typedef struct	s_axes$/;"	s
+s_color	fractol.h	/^typedef struct	s_color$/;"	s
+s_complex	fractol.h	/^typedef struct	s_complex$/;"	s
+s_list	libft.h	/^typedef struct		s_list$/;"	s
+s_man	fractol.h	/^	t_my_man	s_man;$/;"	m	struct:s_my_win
+s_my_man	fractol.h	/^typedef struct	s_my_man$/;"	s
+s_my_win	fractol.h	/^typedef struct	s_my_win$/;"	s
+s_pixel	fractol.h	/^typedef struct	s_pixel$/;"	s
+s_point	fractol.h	/^typedef struct	s_point$/;"	s
+size_line	fractol.h	/^	int			size_line;$/;"	m	struct:s_my_win
+t_axes	fractol.h	/^}				t_axes;$/;"	t	typeref:struct:s_axes
+t_color	fractol.h	/^}				t_color;$/;"	t	typeref:struct:s_color
+t_complex	fractol.h	/^}				t_complex;$/;"	t	typeref:struct:s_complex
+t_fractal	fractol.h	/^}				t_fractal;$/;"	t	typeref:enum:e_myfractal
+t_list	libft.h	/^}					t_list;$/;"	t	typeref:struct:s_list
+t_my_man	fractol.h	/^}				t_my_man;$/;"	t	typeref:struct:s_my_man
+t_my_win	fractol.h	/^}				t_my_win;$/;"	t	typeref:struct:s_my_win
+t_pixel	fractol.h	/^}				t_pixel;$/;"	t	typeref:struct:s_pixel
+t_point	fractol.h	/^}				t_point;$/;"	t	typeref:struct:s_point
+valid_param	fractol.h	/^	char		*valid_param;$/;"	m	struct:s_my_win
+width	fractol.h	/^	int			width;$/;"	m	struct:s_my_win
+win	fractol.h	/^	void		*win;$/;"	m	struct:s_my_win
+x	fractol.h	/^	double		x;$/;"	m	struct:s_point
+x	fractol.h	/^	int			x;$/;"	m	struct:s_my_win
+x	fractol.h	/^	int			x;$/;"	m	struct:s_pixel
+y	fractol.h	/^	double		y;$/;"	m	struct:s_point
+y	fractol.h	/^	int			y;$/;"	m	struct:s_my_win
+y	fractol.h	/^	int			y;$/;"	m	struct:s_pixel
+z	fractol.h	/^	t_complex	z;$/;"	m	struct:s_my_man
+zoom	fractol.h	/^	double		zoom;$/;"	m	struct:s_my_man

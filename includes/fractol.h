@@ -6,16 +6,17 @@
 /*   By: jchardin <jerome.chardin@outlook.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/18 13:43:13 by jchardin          #+#    #+#             */
-/*   Updated: 2019/01/23 17:21:50 by jchardin         ###   ########.fr       */
+/*   Updated: 2019/01/24 15:21:29 by jchardin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FRACTOL_H
 # define FRACTOL_H
 # include "mlx.h"
-# include "../libft/libft.h"
 # include <math.h>
-# include <stdio.h>
+# include "libft.h"
+#include <stdio.h>
+# define KEY_ESCAPE 53
 
 typedef enum	e_myfractal
 {
@@ -102,8 +103,6 @@ void			ft_put_pixel(char *ptr_data, t_point point, t_color color,
 t_my_win *s_win);
 t_complex		ft_complex_add(t_complex z1, t_complex z2);
 void			ft_choose_color_and_put_pixel(t_my_man *s_man, t_my_win *s_win);
-void			ft_calcul_iteration_mandelbrot(t_my_man *s_man,
-t_my_win *s_win);
 void			ft_calcul_offset_axes(t_my_man *s_man, t_my_win *s_win);
 void			ft_calcul_mandelbrot(t_my_man *s_man, t_my_win *s_win);
 void			ft_julia(t_my_win *s_win);
@@ -113,4 +112,9 @@ void			ft_choose_fractol(t_my_win *s_win, int argc, char **argv);
 void			ft_quit(char *str);
 void			ft_init_param_menu(t_my_win *s_win);
 t_color			ft_convert_rgb_hsv(t_color color);
+void			ft_calcul_iteration_mandelbrot(t_my_man *s_mandt);
+void			ft_init_julia(t_my_win *s_win);
+void			ft_draw_julia(t_my_win *s_win);
+void			ft_calcul_julia(t_my_man *s_man, t_my_win *s_win);
+void			ft_init_mandelbrot(t_my_win *s_win);
 #endif

@@ -6,7 +6,7 @@
 /*   By: jchardin <jerome.chardin@outlook.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/18 13:47:56 by jchardin          #+#    #+#             */
-/*   Updated: 2019/01/19 14:12:29 by jchardin         ###   ########.fr       */
+/*   Updated: 2019/01/24 15:04:29 by jchardin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,6 @@ t_complex		ft_make_complex(double a, double b)
 
 t_complex		ft_complex_add(t_complex z1, t_complex z2)
 {
-	t_complex	z;
-
 	z1.a += z2.a;
 	z1.b += z2.b;
 	return (z1);

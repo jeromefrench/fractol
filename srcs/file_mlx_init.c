@@ -6,7 +6,7 @@
 /*   By: jchardin <jerome.chardin@outlook.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/18 15:11:44 by jchardin          #+#    #+#             */
-/*   Updated: 2019/01/23 17:13:45 by jchardin         ###   ########.fr       */
+/*   Updated: 2019/01/24 15:12:56 by jchardin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,6 @@ void			ft_init_mlx_window(t_my_win *s_win)
 s_win->height, "Fractol 42");
 }
 
-int				ft_key_hook(int key, t_my_win *s_win)
-{
-	return (1);
-}
 
 void			ft_put_pixel(char *ptr_data, t_point point, t_color color, t_my_win *s_win)
 {
