@@ -6,7 +6,7 @@
 /*   By: jchardin <jerome.chardin@outlook.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/18 13:43:13 by jchardin          #+#    #+#             */
-/*   Updated: 2019/01/24 15:21:29 by jchardin         ###   ########.fr       */
+/*   Updated: 2019/01/24 19:26:28 by jchardin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 # include "mlx.h"
 # include <math.h>
 # include "libft.h"
-#include <stdio.h>
 # define KEY_ESCAPE 53
 
 typedef enum	e_myfractal
@@ -98,23 +97,20 @@ void			ft_complex_square(t_complex *z);
 double			ft_complex_mod(t_complex z);
 void			ft_init_mlx_window(t_my_win *s_win);
 int				ft_key_hook(int key, t_my_win *s_win);
-void			ft_draw_mandelbrot(t_my_win *s_win);
+void			ft_draw(t_my_win *s_win);
 void			ft_put_pixel(char *ptr_data, t_point point, t_color color,
 t_my_win *s_win);
 t_complex		ft_complex_add(t_complex z1, t_complex z2);
 void			ft_choose_color_and_put_pixel(t_my_man *s_man, t_my_win *s_win);
 void			ft_calcul_offset_axes(t_my_man *s_man, t_my_win *s_win);
-void			ft_calcul_mandelbrot(t_my_man *s_man, t_my_win *s_win);
-void			ft_julia(t_my_win *s_win);
-void			ft_mandelbrot(t_my_win *s_win);
-void			ft_burning_ship(t_my_win *s_win);
+void			ft_calcul_fractal(t_my_man *s_man, t_my_win *s_win);
 void			ft_choose_fractol(t_my_win *s_win, int argc, char **argv);
 void			ft_quit(char *str);
 void			ft_init_param_menu(t_my_win *s_win);
 t_color			ft_convert_rgb_hsv(t_color color);
-void			ft_calcul_iteration_mandelbrot(t_my_man *s_mandt);
-void			ft_init_julia(t_my_win *s_win);
-void			ft_draw_julia(t_my_win *s_win);
-void			ft_calcul_julia(t_my_man *s_man, t_my_win *s_win);
-void			ft_init_mandelbrot(t_my_win *s_win);
+void			ft_calcul_iteration(t_my_man *s_mandt, t_my_win *s_win);
+void			ft_init_window(t_my_win *s_win);
+void			ft_complex_absolute_value_square(t_complex *z);
+void			ft_init_fractal(t_my_win *s_win);
+int				ft_pointer(int button, int x, int y, t_my_win *s_win);
 #endif

@@ -6,7 +6,7 @@
 #    By: jchardin <jerome.chardin@outlook.com>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/01/18 12:42:22 by jchardin          #+#    #+#              #
-#    Updated: 2019/01/24 16:54:00 by jchardin         ###   ########.fr        #
+#    Updated: 2019/01/24 19:27:11 by jchardin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,11 +14,7 @@ NAME = fractol
 
 SRC = main.c  \
 	file_math_util.c \
-	file_mlx_init.c \
 	file_mandelbrot.c \
-	file_julia.c \
-	file_burning_ship.c \
-	file_mandelbrot_seconde.c \
 	file_menu.c
 
 OBJ = $(SRC:.c=.o)
@@ -27,7 +23,7 @@ SRC_Dir = ./srcs/
 CSources = $(addprefix $(SRC_Dir), $(SRC))
 CObjects = $(addprefix $(OBJ_Dir), $(OBJ))
 FLAGS = -Wall -Wextra -Werror
-CC = gcc -g
+CC = gcc
 INCLUDE = -I ./includes 
 LIBRARY = -L /usr/local/lib -lmlx -framework OpenGL -framework AppKit
 
