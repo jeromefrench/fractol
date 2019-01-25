@@ -6,7 +6,7 @@
 /*   By: jchardin <jerome.chardin@outlook.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/18 12:45:13 by jchardin          #+#    #+#             */
-/*   Updated: 2019/01/24 19:16:18 by jchardin         ###   ########.fr       */
+/*   Updated: 2019/01/25 11:39:11 by jchardin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,12 +41,14 @@ int				ft_key_hook(int key, t_my_win *s_win)
 
 int				ft_pointer(int button, int x, int y, t_my_win *s_win)
 {
-	(void)button;
-	s_win->s_man.zoom = 0.5;
-	s_win->s_man.mouse.x = x;
-	s_win->s_man.mouse.y = y;
-	ft_draw(s_win);
-	s_win->s_man.zoom = 0;
+	if (button == 5)
+	{
+		s_win->s_man.zoom = 0.5;
+		s_win->s_man.mouse.x = x;
+		s_win->s_man.mouse.y = y;
+		ft_draw(s_win);
+		s_win->s_man.zoom = 0;
+	}
 	return (1);
 }
 
@@ -62,10 +64,13 @@ void			ft_init_fractal(t_my_win *s_win)
 
 void			ft_init_mlx_window(t_my_win *s_win)
 {
-	s_win->init = mlx_init();
+	if (!(s_win->init = mlx_init()))
+		ft_quit("init mlx failes");
 	s_win->width = 900;
 	s_win->height = 600;
-	s_win->win = mlx_new_window(s_win->init, s_win->width,
-s_win->height, "Fractol 42");
-	s_win->img = mlx_new_image(s_win->init, s_win->width, s_win->height);
+	if (!(s_win->win = mlx_new_window(s_win->init, s_win->width,
+s_win->height, "Fractol 42")))
+		ft_quit("init window failed");
+	if (!(s_win->img = mlx_new_image(s_win->init, s_win->width, s_win->height)))
+		ft_quit("init image failed");
 }

@@ -6,7 +6,7 @@
 /*   By: jchardin <jerome.chardin@outlook.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/23 11:30:02 by jchardin          #+#    #+#             */
-/*   Updated: 2019/01/24 19:15:37 by jchardin         ###   ########.fr       */
+/*   Updated: 2019/01/25 11:20:42 by jchardin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,20 @@
 
 void			ft_init_param_menu(t_my_win *s_win)
 {
-	s_win->valid_param =
-ft_strdup("List of valid param:\nMandelbrot\nJulia\nburning ship");
-	s_win->listparam = (char**)malloc(sizeof(char*) * 3);
+	if (!(s_win->valid_param =
+ft_strdup("List of valid param:\nMandelbrot\nJulia\nburning ship")))
+		ft_quit("malloc failed");
+	if (!(s_win->listparam = (char**)malloc(sizeof(char*) * 3)))
+		ft_quit("malloc failed");
 	s_win->fractal = mandelbrot;
-	s_win->listparam[s_win->fractal] = ft_strdup("mandelbrot");
+	if (!(s_win->listparam[s_win->fractal] = ft_strdup("mandelbrot")))
+		ft_quit("malloc failed");
 	s_win->fractal = julia;
-	s_win->listparam[s_win->fractal] = ft_strdup("julia");
+	if (!(s_win->listparam[s_win->fractal] = ft_strdup("julia")))
+		ft_quit("malloc failed");
 	s_win->fractal = burning_ship;
-	s_win->listparam[s_win->fractal] = ft_strdup("burning ship");
+	if (!(s_win->listparam[s_win->fractal] = ft_strdup("burning ship")))
+		ft_quit("malloc failed");
 }
 
 void			ft_quit(char *str)

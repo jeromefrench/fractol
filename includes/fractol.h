@@ -6,7 +6,7 @@
 /*   By: jchardin <jerome.chardin@outlook.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/18 13:43:13 by jchardin          #+#    #+#             */
-/*   Updated: 2019/01/24 19:26:28 by jchardin         ###   ########.fr       */
+/*   Updated: 2019/01/25 11:36:16 by jchardin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 # include "mlx.h"
 # include <math.h>
 # include "libft.h"
+#include <stdio.h>
 # define KEY_ESCAPE 53
 
 typedef enum	e_myfractal

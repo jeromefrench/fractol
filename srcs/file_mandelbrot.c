@@ -6,7 +6,7 @@
 /*   By: jchardin <jerome.chardin@outlook.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/18 16:44:03 by jchardin          #+#    #+#             */
-/*   Updated: 2019/01/24 19:22:38 by jchardin         ###   ########.fr       */
+/*   Updated: 2019/01/25 11:24:14 by jchardin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,9 @@ void			ft_draw(t_my_win *s_win)
 
 	s_man = s_win->s_man;
 	ft_calcul_offset_axes(&s_man, s_win);
-	s_win->data = mlx_get_data_addr(s_win->img, &(s_win->bits_per_pixel),
-&(s_win->size_line), &(s_win->endian));
+	if (!(s_win->data = mlx_get_data_addr(s_win->img, &(s_win->bits_per_pixel),
+&(s_win->size_line), &(s_win->endian))))
+		ft_quit("malloc failed");
 	ft_calcul_fractal(&s_man, s_win);
 	mlx_clear_window(s_win->init, s_win->win);
 	mlx_put_image_to_window(s_win->init, s_win->win, s_win->img, 0, 0);
