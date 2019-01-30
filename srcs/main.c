@@ -6,7 +6,7 @@
 /*   By: jchardin <jerome.chardin@outlook.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/18 12:45:13 by jchardin          #+#    #+#             */
-/*   Updated: 2019/01/25 11:39:11 by jchardin         ###   ########.fr       */
+/*   Updated: 2019/01/27 16:16:38 by jchardin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,8 @@ int				ft_key_hook(int key, t_my_win *s_win)
 
 int				ft_pointer(int button, int x, int y, t_my_win *s_win)
 {
-	if (button == 5)
+	printf("=%d\n", button);
+	if (button == 5 || button == 1) 
 	{
 		s_win->s_man.zoom = 0.5;
 		s_win->s_man.mouse.x = x;
